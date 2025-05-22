@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Vanilla JS Example</title>
+</head>
+<body>
+    <input type="text" id="inputMsg"> <br>
+    Your msg is <b id="outputMsg"></b>
+
+    <script>
+        // Initial value
+        let msg = 'Get the input value';
+
+        // Get DOM elements
+        const input = document.getElementById('inputMsg');
+        const output = document.getElementById('outputMsg');
+
+        // Set initial values
+        input.value = msg;
+        output.textContent = msg;
+
+        // Listen for input changes
+        input.addEventListener('input', function () {
+            msg = input.value;
+            output.textContent = msg;
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="msg"> <br>
+        Your msg is <b>{{ msg }} ({{ msg.length }})</b>
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+            return {
+                msg: 'Default message'
+            }
+        },
+
+    }).mount('#app')
+</script>
+
+</html>

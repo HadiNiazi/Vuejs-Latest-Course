@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-show="visible">I am displaying through v-show</p>
+        <p v-if="visible">Display me when condition meets</p>
+        <p v-else>No condition meets.</p>
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+
+            return {
+
+                visible: false
+                
+            }
+
+        }
+
+    }).mount('#app')
+</script>
+
+</html>

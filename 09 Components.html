@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+
+        <app-button>Insert</app-button>
+        <app-button>Update</app-button>
+
+
+    </div>
+</body>
+
+<script type="module">
+
+    import AppButton from './js/components/App-Button.js';
+
+    let app = {
+
+        components: {
+            'app-button': AppButton
+        },
+
+        data() {
+
+            return {
+
+                message: 'Welcome to the Vuejs'
+
+            }
+
+        }
+
+    }
+
+    Vue.createApp(app).mount('#app')
+</script>
+
+</html>

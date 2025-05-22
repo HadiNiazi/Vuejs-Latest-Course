@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="fruit in fruits" :key="fruit.id">{{ fruit.name }}</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+
+            return {
+
+                fruits: [
+                    {
+                        id: 1,
+                        name:'Apple'
+                    },
+                    {
+                        id: 2,
+                        name:'Bnana'
+                    },
+                    {
+                        id: 3,
+                        name:'Mango slice'
+                    },
+                ]                            
+                
+            }
+
+        }
+
+    }).mount('#app')
+</script>
+
+</html>

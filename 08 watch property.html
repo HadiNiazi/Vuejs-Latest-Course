@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ count }}</p>
+        <button @click="increament">Click to Increase</button>
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+
+            return {
+                count: 1
+            }
+
+        },
+
+        methods: {
+            increament() {
+                this.count++;
+            }
+        },
+
+        watch: {
+
+            count(newValue, oldValue) {
+                console.log('Your old value was '+oldValue+' and it is updated with this value '+newValue);
+            }
+
+        }
+
+
+    }).mount('#app')
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <style>
+        .text-green {
+            color: green;
+        }
+        .text-red {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+
+        <!-- v-bind -->
+        <!-- v-on:click -->
+        <button :class="isActive ? 'text-green': 'text-red' " @click="showMyAlert">Show Alert</button>
+
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+
+            return {
+
+                message: 'Welcome to the Vuejs',
+                isActive: false
+
+            }
+
+        },
+
+        methods: {
+
+            // showMyAlert() {
+            //     alert('Hey I am here');
+            // }
+
+            showMyAlert() {
+                this.isActive = ! this.isActive
+            }
+
+        }
+
+    }).mount('#app')
+</script>
+
+</html>

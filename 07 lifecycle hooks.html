@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+
+            return {
+
+                message: 'Welcome to the Vuejs'
+
+            }
+
+        },
+
+        created() {
+            console.log('component is created');
+        },
+
+        beforeCreate() {
+            console.log('before component is created');
+        },
+
+        mounted() {
+            console.log('component is mounted');
+        },
+
+        beforeMount() {
+            console.log('before component is mounted');
+        },
+
+        destroyed() {
+            console.log('comp is destroyed');
+        },
+
+        beforeDestroy() {
+            console.log('before comp is destroyed');
+        }
+
+    }).mount('#app')
+</script>
+
+</html>
