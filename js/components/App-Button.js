@@ -1,7 +1,25 @@
 export default {
-    'template': `<button><slot /></button>`,
+
+    // props: ['message'],
+
+     props: {
+        message: {
+            type: String,
+            default: 'Default Msg'
+        }
+     },
+
+    'template': `<button @click="sendDataToParent">{{ message }}</button>`,
 
     created() {
-        console.log('Component is created')
+        console.log(this.message)
+    },
+
+    methods: {
+        
+        sendDataToParent() {
+            this.$emit('data', 'nice to see it');
+        }
+
     }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vuejs Course</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .active {
+            color:aqua;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .allow {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1 :class="className">Heading 1</h1>
+        <h2 :class="[className, underline]">Heading 2</h2>
+        <h3 :class="{ 'allow': allow }">Heading 3</h3>
+        <p :style="{ 'font-weight': fontWeight, 'color': 'red' }">I am a paragraph</p>
+    </div>
+</body>
+
+<script>
+    Vue.createApp({
+
+        data() {
+
+            return {
+                className: 'active',
+                underline: 'underline',
+                allow: true,
+                fontWeight: 800
+            }
+
+        }
+
+    }).mount('#app')
+</script>
+
+</html>
